@@ -5,7 +5,7 @@
 ### **1.Cách Thức Hoạt Động Trong OSI**
 - Giả sử khi bạn muốn nhập thông điệp HELLO gửi từ máy bạn đến một máy nhận nào đó ta sẽ có quá trình chuyển đổi lần lượt của nó như sau
 - Khi vào tầng **Application(tầng Ứng Dụng)**: gói tin vẫn chưa được chuyển đổi qua dạng chuỗi các bit tại đây gói tin này sẽ được đánh thêm các cổng để xuống các tầng giới có thể xác định được loại giao thức và địa chỉ cổng nguồn, cổng đích
-[ảnh minh hoạ](https://imgur.com/LtlSwFw.png)
+![ảnh minh hoạ](https://imgur.com/LtlSwFw.png)
 - Khi vào tâng **Presentation(tầng trình bày)**: gói tin lúc này sẽ chuyển qua từ dạng chuỗi ký tự , sô sang thành các chuỗi bit và được cung cấp thêm vài các giao thức mã hoá . Cụ thể ở tầng này dùng các phương pháp dịch mã từ ASCII sang EBCDIC 
 - Khi vào tầng **Session(tầng phiên)**: ở tầng này cung cấp các thông tin về việc thông tin giữa hai máy hay huỷ các phiên làm việc , tầng phiên ở đây với mục đích khi bạn mở một tap wed là nhạc sau đó lại mở 1 tap khác về đọc báo thì tầng phiên đảm cho việc khi gói tin bạn nhận được hay chuyển đi là đúng các phiên làm việc của nó chứ không bị lẫn lộn , hay nói cách khác chính là bổ sung thông tin về luồng dữ liệu
   - Ngoài ra ở tầng này còn nó có thêm điểm đồng bộ với mục đồng bộ được dữ liệu khi có lỗi xảy ra
@@ -15,7 +15,7 @@
     - [link tham khảo](https://www.youtube.com/watch?v=_-opuwvnRk0)
 - Khi vào tầng **Network(tầng mạng)**: khi vào đến tầng mạng này nơi mà các router hoạt động ở đây các gói tin sẽ được có thêm địa chỉ logic nhằm mục đích định tuyến được đường đi trên mạng , việc có thêm địa chỉ logic(hay là IP) sẽ giúp cho các router tìm ra đường đi tối ưu cho gói tin đồng thời các gói tin xuống đến tầng này sẽ được đóng gói thành các Packet
     - Việc được đính thêm các header là các IP header vậy cấu trúc IP header chứa những gì
-[ảnh minh hoạ](https://imgur.com/Py2mK5S.png)
+![ảnh minh hoạ](https://imgur.com/Py2mK5S.png)
       - Cụ thể với các trường trong này chúng ta cần chú ý như sau
         - Phiên bản (Version):Trường đầu tiên trong header của gói tin IP chính là trường Phiên bản (Version) dài 4 bit. Với IPv4, nó có giá trị bằng 4. 
         - Header Length : độ lớn của Header 
@@ -28,18 +28,18 @@
         - Destination Address: địa chỉ máy đích ở đây là địa chỉ của Default gateway
     - [link tham khảo](http://elearning.vnua.edu.vn/mang-may-tinh-k63attt-th02038.html?chaps_slug=41-introduction-to-network-layer-3772441)
 - Khi vào tầng **Data-link**: ở đây đầu tiên dữ liệu sẽ được giao thức LLC(logical link control) xử lý trước ở đây gói tin được đóng gói thành các các Frame để mang các thoogn tin về việc máy đang thông tin hay là truyền thông giữa hai máy bắt đầu và két thức khi nào , sau khi đã được tạo thành các Frame thì gói tin sẽ được giao thức MAC(Media Acces Control) xử lý sau khi được giao thức MAC xử lý gói tin sẽ được có thêm địa chỉ MAC(là địa chỉ vật lý của máy) dùng cho quá trình định tuyến đường đi để chính xác hơn giao thức MAC này hoạt động ở giữa hai tâng Data-link và Physical
-[ảnh minh hoạ](https://imgur.com/uUEpPOi.png)
+![ảnh minh hoạ](https://imgur.com/uUEpPOi.png)
    - Khi làm việc ở tâng này gói tin sẽ được đính thêm địa chỉ MAC hay chính là địa chỉ vật lý của máy. Vậy địa chỉ MAC ở đây là như nào ???
    - **MAC**:là mã duy nhất được gán bởi nhà sản xuất cho từng phần cứng mạng (như cạc không dây hoặc cạc Ethernet). MAC viết tắt của Media Access Control, và mỗi mã là duy nhất cho một thiết bị. Địa chỉ MAC là một bộ sáu cặp hai ký tự, cách nhau bằng dấu hai chấm.
-[ảnh minh hoạ](https://imgur.com/m9UI30L.png)
+![ảnh minh hoạ](https://imgur.com/m9UI30L.png)
    - Vậy khi thêm địa chỉ MAC và các giao thức thực hiện xong gói tin ở tầng Data-link sẽ như nào??/
-[ảnh minh hoạ](https://imgur.com/wMPE08E.png)
+![ảnh minh hoạ](https://imgur.com/wMPE08E.png)
      - 
 - Khi và đến tầng**Physical(tầng vật lý)**: khi đó gói tin ở dưới dạng một chuỗi bit hoàn chỉnh vs các thông tin về địa chỉ đến và đi để bắt đầu quá trình truyền tin đi 
 [ảnh minh hoạ](https://imgur.com/uUEpPOi.png)
 ### **2.Tìm Hiểu Giao thức ARP**
 - là giao thức dùng để phân giải địa chỉ logic(IP) sang thành địa chỉ vật lý(MAC) như vậy làm thế nào để để giao thức này có thể phân giải được . Trước tiên chúng ta tìm hiểu về việc cấu trúc của gói tin ARP như nào
-[ảnh minh hoạ](https://imgur.com/WcF6I8I.png)
+![ảnh minh hoạ](https://imgur.com/WcF6I8I.png)
   - Cụ thể về các thành phần trong gói tin ta cần lưu ý là:
     - Hardware Type:xác định kiểu bộ giao tiếp phần cứng máy gửi cần biết
     - Protocol Type:Xác định kiểu giao thức địa chỉ cấp cao máy gửi cung cấp
@@ -50,7 +50,7 @@
     - Target HA (target hardware address): địa chỉ MAC của máy nhận
     - Target Protocol Address: địa chỉ IP máy nhận
 - Như vậy làm ARP hoạt động sao ??
-[ảnh minh hoạ](https://imgur.com/2sekdOF.png)
+![ảnh minh hoạ](https://imgur.com/2sekdOF.png)
   - Chúng ta có thể minh hoạ một cách như sau để hiểu qua về cách thức hoạt động của giao thức ARP , ví dụ bây giờ bạn vào một lớp học bạn biết trong lớp đó có một người tên Toàn chẳng hạn , bạn muốn ngồi cạnh người đó nhưng không biết bạn ấy ngồi ở đâu thì lúc đó giải pháp tốt nhất đó chính là việc bạn nói lớn cho mọi người cùng nghe xin hỏi bạn toàn đang ngồi vị trí nào ạ , nếu bạn đó nghe thấy sẽ giơ tay lên để bạn biết được vị trí và để bạn có thể đến gần và bắt đầu cuộc trò chuyện tương tự như thế quá trình hoạt động của ARP sẽ tiến hành như sau :
     - Bước 1: Thiết bị A kiểm tra cache của mình xem có địa chỉ tham chiếu IP và địa chỉ MAC nếu có thì sẽ tiến hành kết nối không thì sẽ tiến hành bước sau
     - Bước 2: Bắt đầu khởi tạo gói tin ARP Request. Nó sẽ gửi một gói tin broadcast đến toàn bộ các máy khác trong mạng với địa chỉ MAC và IP máy gửi là địa chỉ của chính nó, địa chỉ IP máy nhận địa chỉ MAC máy nhận sẽ là ff:ff:ff:ff:ff
