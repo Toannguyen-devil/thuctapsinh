@@ -40,7 +40,9 @@
    - **MAC**:là mã duy nhất được gán bởi nhà sản xuất cho từng phần cứng mạng (như cạc không dây hoặc cạc Ethernet). MAC viết tắt của Media Access Control, và mỗi mã là duy nhất cho một thiết bị. Địa chỉ MAC là một bộ sáu cặp hai ký tự, cách nhau bằng dấu hai chấm.
 
 ![ảnh minh hoạ](https://imgur.com/m9UI30L.png)
+
    - Vậy khi thêm địa chỉ MAC và các giao thức thực hiện xong gói tin ở tầng Data-link sẽ như nào??/
+
 ![ảnh minh hoạ](https://imgur.com/wMPE08E.png)
      - 
 - Khi và đến tầng**Physical(tầng vật lý)**: khi đó gói tin ở dưới dạng một chuỗi bit hoàn chỉnh vs các thông tin về địa chỉ đến và đi để bắt đầu quá trình truyền tin đi 
