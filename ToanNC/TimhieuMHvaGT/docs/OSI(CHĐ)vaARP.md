@@ -12,6 +12,7 @@
     - VD: khi truyền đi 2000 trang giấy thì mỗi khi truyền xong 100 trang thì sẽ đánh 1 nút đồng bộ vì thì khi trang thứ 523 mà có bị lỗi ta chỉ việc truyền lại từ trang 501 chứ ko pải truyền từ trang 1->500 
 - Khi vào tầng **Transport(tầng vận chuyển)**: khi vào đến tầng vận chuyển các gói tin sẽ bị chia nhỏ để nhằm mục đích kiểm soát tác nghẽn (giá trị Max của segement là 1460 bytes ), khi bị chia nhỏ sang thành các segement này gói tin sẽ được ghép nối thông tin về phiên làm việc để chọn ra việc truyền theo hình thức nào tin cậy hay không tin cậy, gói tin ở tầng này được chia thành các segement
   - Trong tâng này ta cần chú ý đến hai giao thức là UDP và TCP . Trong giao thức TCP ta cần chú ý đến việc quá trình bắt tay 3 bước và cửa sổ trượt , cũng như cơ chế để điều khiển luồng
+    -[link đọc về TCP và UDP](https://github.com/Toannguyen-devil/thuctapsinh/blob/master/ToanNC/TimhieuMHvaGT/docs/TimhieucacMHvaGT.md)
     - Quá trình bắt tay ba bước
 ![ảnh minh hoạ](https://imgur.com/jJmCVy4.png)
     - Điều Khiển Luồng
