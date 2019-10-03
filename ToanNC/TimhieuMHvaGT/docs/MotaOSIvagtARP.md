@@ -44,7 +44,7 @@
    - Vậy khi thêm địa chỉ MAC và các giao thức thực hiện xong gói tin ở tầng Data-link sẽ như nào??/
 
 ![ảnh minh hoạ](https://imgur.com/wMPE08E.png)
-     - 
+      - lúc này lại đặt ra câu hỏi vậy làm sao để chúng ta có được địa chỉ MAC?? . Chúng ta sẽ sử dụng Giao thức ARP là giao thức để phân giải địa chỉ IP qua địa chỉ MAC chi tiết cùng đến phần 2 để tìm hiểu về giao thức ARP
 - Khi và đến tầng**Physical(tầng vật lý)**: khi đó gói tin ở dưới dạng một chuỗi bit hoàn chỉnh vs các thông tin về địa chỉ đến và đi để bắt đầu quá trình truyền tin đi 
 ![ảnh minh hoạ](https://imgur.com/uUEpPOi.png)
 ### **2.Tìm Hiểu Giao thức ARP**
