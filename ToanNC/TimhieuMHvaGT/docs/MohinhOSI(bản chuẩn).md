@@ -34,7 +34,7 @@
 ![ảnh minh hoạ](https://imgur.com/vUGCWvz.png)
   - **Tầng liên kết dữ liệu – Data Link Layer**:(Switch và Bridges)Đảm bảo gói tin sẽ được gửi tới đúng thiết bị và phiên dịch các gói tin đó thành các bit 1 0 0 1 để truyền xuống tầng vật lý.Các packets từ tầng Network sẽ được đóng gói vào các đơn vị lớn hơn gọi là Frame. Địa chỉ MAC nguồn và MAC đích sẽ được gắn vào frame.Để thực hiện được nhiệm vụ đó thì tầng Data link dùng 2 giao thức là LLC (logical link control) và MAC (Media Access Control ) được nằm trong bộ tiêu chuẩn Ethernet
 ![ảnh minh hoạ](https://imgur.com/Yv1aaVO.png)
-  - **Tầng Vật Lý – Physical Layer **:Chức năng :(Hub) gửi và nhận bits 0,1.Mỗi loại thông tin truyền thông sử dụng các định dạng bit khác nhau.Tại lớp Vật lý, giao diện giữa Thiết bị đầu cuối dữ liệu (Data Terminal Equipment - DTE) và Thiết bị Ngắt kết nối Dữ liệu ( DCE - Data Circuit-Terminating Equipment), được xác định. DCE thường nằm ở nhà cung cấp dịch vụ, trong khi DTE là Thiết bị đính kèm. Các dịch vụ có sẵn cho DTE thường được truy cập thông qua Một modem hoặc đơn vị dịch vụ kênh / đơn vị dịch vụ dữ liệu (CSU / DSU)
+  - **Tầng Vật Lý – Physical Layer**:Chức năng :(Hub) gửi và nhận bits 0,1.Mỗi loại thông tin truyền thông sử dụng các định dạng bit khác nhau.Tại lớp Vật lý, giao diện giữa Thiết bị đầu cuối dữ liệu (Data Terminal Equipment - DTE) và Thiết bị Ngắt kết nối Dữ liệu ( DCE - Data Circuit-Terminating Equipment), được xác định. DCE thường nằm ở nhà cung cấp dịch vụ, trong khi DTE là Thiết bị đính kèm. Các dịch vụ có sẵn cho DTE thường được truy cập thông qua Một modem hoặc đơn vị dịch vụ kênh / đơn vị dịch vụ dữ liệu (CSU / DSU)
 ![ảnh minh hoạ](https://imgur.com/wkK5hbT.png)
 ### **2.Quá Trình Chuyển Hoá Dữ Liệu Trong OSI**
 - Xét trường hợp cụ thể là truy cập vào trang Google.
@@ -60,7 +60,7 @@
 
 - Trong này chúng ta có đề cập tới một số các giao thức cũng như các địa chỉ Logic và Vật Lý vậy nó là gì??, cùng tìm hiểu ở các mục dưới nha
 ### **3.Tìm Hiểu cơ bản về IP,MAC,TCP và UDP**
-  - ** Địa chỉ Logic(hay chính là IP)**: là số định dạng cho một phần cứng mạng, các thiết bị sử dụng địa chỉ IP để liên lạc với nhau qua mạng dựa trên IP như mạng Internet.Một địa chỉ IP sẽ có các trường như sau(xét IPv4)
+  - **Địa chỉ Logic(hay chính là IP)**: là số định dạng cho một phần cứng mạng, các thiết bị sử dụng địa chỉ IP để liên lạc với nhau qua mạng dựa trên IP như mạng Internet.Một địa chỉ IP sẽ có các trường như sau(xét IPv4)
 ![ảnh minh hoạ](https://imgur.com/Py2mK5S.png)
      - Phiên bản (Version):Trường đầu tiên trong header của gói tin IP chính là trường Phiên bản (Version) dài 4 bit. Với IPv4, nó có giá trị bằng 4. 
      - Header Length : độ lớn của Header 
@@ -71,9 +71,9 @@
      - Time to Live : thời gian giữ lại gói tin
      - Source Address : địa chỉ máy trạm ở đây chính là địa chỉ của máy gửi 
      - Destination Address: địa chỉ máy đích ở đây là địa chỉ của máy đích
-  - ** Địa chỉ Vật Lý(hay chính là MAC):là mã duy nhất được gán bởi nhà sản xuất cho từng phần cứng mạng (như cạc không dây hoặc cạc Ethernet). MAC viết tắt của Media Access Control, và mỗi mã là duy nhất cho một thiết bị. Địa chỉ MAC là một bộ sáu cặp hai ký tự, cách nhau bằng dấu hai chấm.
+  - **Địa chỉ Vật Lý(hay chính là MAC)**:là mã duy nhất được gán bởi nhà sản xuất cho từng phần cứng mạng (như cạc không dây hoặc cạc Ethernet). MAC viết tắt của Media Access Control, và mỗi mã là duy nhất cho một thiết bị. Địa chỉ MAC là một bộ sáu cặp hai ký tự, cách nhau bằng dấu hai chấm.
 ![ảnh minh hoạ](https://imgur.com/m9UI30L.png)
-  - ** Giao thức TCP(Transmission Control Protocol)**:là một trong các giao thức cốt lõi của bộ giao thức TCP/IP. Sử dụng TCP, các ứng dụng trên các máy chủ được nối mạng có thể tạo các "kết nối" với nhau, mà qua đó chúng có thể trao đổi dữ liệu hoặc các gói tin. Giao thức này đảm bảo chuyển giao dữ liệu tới nơi nhận một cách đáng tin cậy và đúng thứ tự. TCP còn phân biệt giữa dữ liệu của nhiều ứng dụng (chẳng hạn, dịch vụ Web và dịch vụ thư điện tử) đồng thời chạy trên cùng một máy chủ.
+  - **Giao thức TCP(Transmission Control Protocol)**:là một trong các giao thức cốt lõi của bộ giao thức TCP/IP. Sử dụng TCP, các ứng dụng trên các máy chủ được nối mạng có thể tạo các "kết nối" với nhau, mà qua đó chúng có thể trao đổi dữ liệu hoặc các gói tin. Giao thức này đảm bảo chuyển giao dữ liệu tới nơi nhận một cách đáng tin cậy và đúng thứ tự. TCP còn phân biệt giữa dữ liệu của nhiều ứng dụng (chẳng hạn, dịch vụ Web và dịch vụ thư điện tử) đồng thời chạy trên cùng một máy chủ.
   - Cấu trúc gói tin TCP
 ![ảnh minh hoạ](https://imgur.com/iivM0xF.png)
     - Source port :Số hiệu của cổng tại máy tính gửi.
