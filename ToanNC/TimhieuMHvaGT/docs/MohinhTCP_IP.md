@@ -15,6 +15,7 @@
   
   - Như vậy chúng ta có thế thấy rằng trong mô hình TCP/IP tầng**Application** là bao gồm 3 tầng **Application**,**Presentation**,**Session** của mô hình OSI , vậy bây giờ chúng ta cùng đi cụ thể vào từng tâng nha.
      - **Tầng Application**: là tầng ứng dụng ở đây có hầu hết các giao thức để phục vụ cho quá trình truyền thông giữ người dùng và Internet
+
 ![ảnh minh hoạ](https://imgur.com/WUciDUa.png)
      - **Tầng Transport**: là tầng giao vận có nhiệm vụ tạo các kết nối giao thức như là điểu khiển chuyền ảo TCP, giao thức gói dữ liệu người dùng UDP giữa máy chủ và mạng , nó còn giúp chỉ định các cổng cho các quy trình đang chạy trên máy để TCP và UDP có thể mô tả chi tiết về cổng nguồn và cổng đích
 ![ảnh minh hoạ](https://imgur.com/3HIjY55.png)
@@ -23,6 +24,7 @@
      - **Tầng Data-Link**: là tầng liên kết dữ liệu tại tầng này các gói tin sẽ được thêm cái địa chỉ vật lý(địa chỉ MAC) để nhằm kiểm soát phương tiện truyền dẫn vật lý và định tuyến chính xác hơn
 ![ảnh minh hoạ](https://imgur.com/1rlkQee.png)
      - **Tầng Physical**: là tâng vật lý nó gửi và nhận tín hiệu trên dây vật lý hoặc ăng-ten để truyền các bit đượcc tìm thấy trong khung
+
 ![ảnh minh hoạ](https://imgur.com/mDDVMfT.png)
 ### **2.Quá Trình Chuyển Hoá Dữ Liệu Trong TCP/IP**
 ![ảnh minh hoạ](https://imgur.com/9O5K7dF.png)
@@ -64,11 +66,14 @@
 - **Mô Tả QT Bắt Tay Ba Bước**
 ![ảnh minh hoạ](https://imgur.com/DwLkXbc.png)
 ![ảnh minh hoạ](https://imgur.com/ulfPnYa.png)
-- **Cơ chế điều khiển luồng(Flow Control)
+- **Cơ chế điều khiển luồng(Flow Control)**
 ![ảnh minh hoạ](https://imgur.com/QFkFoO4.png)
 - Trên đây là một số tìm hiểu sơ bộ về mô hình TCP/IP cũng như các giao thức hoạt động tại các tầng 
+
 -[link tham khảo 1 ](https://cuongquach.com/tu-hoc-ccna-tim-hieu-giao-thuc-tcp-udp.html)
+
 -[link tham khảo 2 ](https://microchipdeveloper.com/tcpip:tcp-ip-application-layer-layer-5)
--[link tham khảo 2 ](https://vi.wikipedia.org/wiki/TCP/IP)
+
+-[link tham khảo 3 ](https://vi.wikipedia.org/wiki/TCP/IP)
 
 
