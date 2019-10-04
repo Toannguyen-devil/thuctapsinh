@@ -76,4 +76,4 @@
 
 -[link tham khảo 3 ](https://vi.wikipedia.org/wiki/TCP/IP)
 
-
+-[Video quá trình đóng gói trong mô hình TCP/IP](https://www.youtube.com/watch?v=WA6IXZsgCJI)
