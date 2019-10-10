@@ -4,6 +4,7 @@
 - **2.Cơ Chế Hoạt Động**
 - **3.Cấu Trúc Bản Tin DHCP**
 - **4.Phân Tích Bản Tin DHCP bằng Wireshark**
+- **5.Cơ Chế Tự Động Refresh Lại Thời Gian Đăng Ký(lease time)**
 ### **1.Khái Niệm**
 - DHCP (Dynamic Host Configuration Protocol) là giao thức cấu hình host động. Nó cung cấp cho máy tính địa chỉ ip ; subnet mask; default gateway. Và nó thường được cấp phát bởi DHPC server được tích hợp sẵn trên router.
 - DHCP giao tiếp bằng UDP và sử dụng port 67 và 68. DHCP server sử dụng port 67 để nghe thông tin từ các client và sử dụng port 68 để reply thông tin
@@ -111,6 +112,19 @@
   - **Bản Tin DHCP ACK**:
 ![ảnh minh hoạ](https://imgur.com/ppkswyJ.png)
 ![ảnh minh hoạ](https://imgur.com/CkHCVmJ.png)
+### **5.Cơ Chế Tự Động Refresh Lại Thời Gian Đăng Ký(lease time)**
+- Bây giờ ta coi như là DHCP client đã đăng ký được một IP address rồi . Theo mặc định của DHCP server thì mỗi IP lease chỉ được có 8 ngày . Nếu theo mặc định 8 ngày thì một DHCP client sau một khoảng thời gian là 50%( tức là 4 ngày ) nó sẽ tự động xin lại IP address với DHCP mà nó đã xin ban đầu. DHCP client lúc này sẽ gởi một DHCP Request trực tiếp đên DHCP server mà nó đã xin ban đầu (unicast). Nhưng sẽ có hai vấn đề nếu Server còn sống thì sao và Server đã chết thì sao
+  - Nếu DHCP Server còn sống : nó sẽ trả lời bằng một gói DHCP ACK để renew( cho thuê mới lại) tới DHCP client gói này bao gồm các thông số cấu hình mới cập nhập nhất trên DHCP server
+  - Nếu DHCP Server chết: thì DHCP client này tiếp tục sử dụng cấu hình hiện thời của nó. Vậy một câu hỏi đặt ra liệu khi hết thời gian sử dụng thì DHCP client sẽ trả lại IP ngay ?? và lấy IP đâu để sử dụng ??
+    - Trong trường hợp này nếu DHCP chết thì DHCP client sẽ sử dụng tiếp cấu hình hiện tại đến khi hết thời gian sử dụng nếu thời gian đã hết thì client nó sẽ ngay lập tức dừng lại việc dùng IP address đã đăng ký đó . Đông thời nó sẽ tiến hành thuê một địa chỉ IP khác như ban đầu ở các DHCPs server khác mà không phải server ban đầu
+    - ***Chú ý***: khi bạn khởi động( restart) lại DHCP client thì nó sự tự động renew lại IP address mà trước khi nó shut down
+- Vậy nếu khi ta có một sự thay đổi về cấu hình trên DHCP server mà ta muốn có tác dụng đến client ngay lập tức thì phải làm sao ??
+  - Lúc này ta có thể renew một IP lease( bằng tay) đối với DHCP client như sau :
+     - Bước 1: mở của sổ CMD của client lên
+![ảnh minh hoạ](https://imgur.com/lY6XWpV.png)
+     - Bước 2: gõ lệnh sau 
+![ảnh minh hoạ](https://imgur.com/amMdAhl.png)
+     - Sau khi thực hiện nó sẽ gởi một gói tin DHCP Request đến DHCP server để update thông tin về cấu hình và thời gian đăng ký mới 
 
 
 
