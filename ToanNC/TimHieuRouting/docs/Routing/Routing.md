@@ -16,6 +16,7 @@
   - **Static Routing( Định tuyến tĩnh)**
 ![ảnh minh hoạ](https://imgur.com/TpnIaoV.png)
   - **Dynamic Routing(Định tuyến động)**
+
 ![ảnh mình hoạ](https://imgur.com/W6PotWy.png)
 - Cụ thể hơn chúng ta có thể xem về sơ đồ phân chia các hình thức định tuyến sau đây
 ![ảnh minh hoạ](https://imgur.com/sc6tS3e.png)
@@ -29,6 +30,7 @@
     - **IP address**:Địa chỉ IP - Xác định một máy duy nhất trên mạng cục bộ.
     - **Subnet mask**:Mặt nạ mạng con - Xác định mạng con máy chủ mạng.
     - **Default gateway**:Cổng mặc định - Xác định bộ định tuyến mà gói tin được gửi đến khi đích không nằm trên cùng mạng con mạng cục bộ.
+
 ![ảnh minh hoạ](https://imgur.com/kzZxeFS.png)
 ### **2.Static Routing**
 #### **2.1. Khái niệm và nguyên lý làm việc**
@@ -69,7 +71,9 @@
   - Cung cấp dễ dàng bảo trì bảng đinh tuyến trong các mạng nhỏ và dự kiến sẽ không tăng trưởng đáng kể
   - Định tuyến đến các mạng sơ khai là một mạng được truy cập bởi một tuyến duy nhất và bộ định tuyến không có hàng xóm khác
   - Sử dụng một tuyến mặc định duy nhất để biểu thị một đường dẫn đến bất kỳ mạng nào không có kết quả khớp cụ thể hơn với một tuyến khác trong bảng định tuyến . Các tuyến mặc định sử dụng để gửi lưu lượng đến bất kỳ đích nào ngoài bộ định tuyến 
+
 [link tham khảo](https://vnpro.vn/thu-vien/static-route-la-gi-2045.html)
+
 [link tham khảo](https://hocvienit.wordpress.com/2012/04/24/static-routing/)
 
   
